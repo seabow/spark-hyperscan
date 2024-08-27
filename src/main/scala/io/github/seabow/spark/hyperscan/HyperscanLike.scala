@@ -27,8 +27,6 @@ case class HyperscanLike(left: Expression, right: Expression) extends BinaryExpr
     val regexes= ( 0 until patterns.numElements()).map(i=>patterns.getUTF8String(i).toString)
     HyperscanLikeInstance(regexes)}
 
-  override protected def withNewChildrenInternal(newLeft: Expression, newRight: Expression): HyperscanLike =  copy(left = newLeft,right = newRight)
-
   override def nullSafeEval(value1: Any,value2:Any): Any = {
     val str=value1.asInstanceOf[UTF8String].toString
     hlikeInstance.hlikeInternal(str)
