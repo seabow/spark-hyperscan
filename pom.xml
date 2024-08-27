@@ -6,7 +6,7 @@
 
     <groupId>io.github.seabow</groupId>
     <artifactId>spark-hyperscan</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>3.3.2-0.1</version>
     <packaging>jar</packaging>
 
     <properties>
